@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Load JavaScript -->
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
+    </header>
+    <main>
+      <header class="main__hero">
+        <h1>Harry Potter Summary</h1>
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section id="section1" data-nav="Book 1" class="active">
+        <div class="landing__container">
+          <h2>Book 1: Harry Potter and the Sorcerer's Stone</h2>
+          <p>
+            Harry Potter is the most miserable, lonely boy you can imagine. He’s
+            shunned by his relatives, the Dursley’s, that have raised him since
+            he was an infant. He’s forced to live in the cupboard under the
+            stairs, forced to wear his cousin Dudley’s hand-me-down clothes, and
+            forced to go to his neighbour’s house when the rest of the family is
+            doing something fun. Yes, he’s just about as miserable as you can
+            get.
+          </p>
+
+          <p>
+            Harry’s world gets turned upside down on his 11th birthday, however.
+            A giant, Hagrid, informs Harry that he’s really a wizard, and will
+            soon be attending Hogwarts School of Witchcraft and Wizardry. Harry
+            also learns that, in the wizarding world, he’s a hero. When he was
+            an infant, the evil Lord Voldemort killed his parents and then tried
+            to kill Harry too. What’s so amazing to everyone is that Harry
+            survived, and allegedly destroyed Voldemort in the process.
+          </p>
+
+          <p>
+            When Harry hears all this, he doesn’t know what to think. However,
+            everything Hagrid tells him turns out to be true, and with a joyful
+            heart Harry starts wizarding school in September. He quickly becomes
+            best friends with a boy named Ron Weasley, and before they even make
+            it to Christmas, they break tons of school rules when they attack a
+            troll and prevent it from killing fellow student Hermione Granger.
+            After the troll incident, the three become inseparable, and Harry is
+            amazed to have found such great friends. He is constantly busy
+            trying to stay on top of the mounds of homework, as well as
+            participating in weekly Quidditch practices. Quidditch is a popular
+            sport among wizards and Harry is the youngest Quidditch player in
+            over a century. It's also a game Harry loves more than anything else
+            at school.
+          </p>
+
+          <p>
+            As the year progresses, the three friends set out to solve the
+            mystery of the gigantic three-headed dog that is guarding something
+            in a deserted corridor in the school. They figure out that a very
+            valuable object, the Sorcerer’s Stone, is being hidden in the
+            school, although they don’t know why. When one of the professors
+            starts acting as if he’s trying to steal it, they quickly take
+            action to circumvent the theft.
+          </p>
+
+          <p>
+            Things come to a head when they sneak past the vicious, three-headed
+            dog and go down into the bowels of the school, determined to save
+            the stone. Ron and Hermione help Harry get through the challenges
+            set forth to stop the thief, but Harry must go on alone to battle
+            the professor. When he finally gets to the last room, however, he’s
+            astonished to find someone else entirely.
+          </p>
+
+          <p>
+            Harry is forced to do battle with the wizard that tried to kill him
+            so many years before, Lord Voldemort. He’s able to save the
+            Sorcerer’s Stone, although he’s almost killed in process. The school
+            headmaster, Dumbledore, arrives just in time to save Harry.
+          </p>
+
+          <p>
+            The school year ends spectacularly. Harry, Ron, and Hermione are
+            honored for their service to the school, and Harry leaves to go back
+            to the Dursley’s for the summer feeling as if he’s finally found a
+            place where he really belongs.
+          </p>
+        </div>
+      </section>
+      <section id="section2" data-nav="Book 2">
+        <div class="landing__container">
+          <h2>Book 2: Harry Potter and the Chamber of Secrets</h2>
+          <p>
+            It’s been another long summer at the Dursley’s for Harry Potter. He
+            can’t wait to get back to Hogwarts and is counting down the days
+            until he can return. He’s surprised when, on his birthday, a strange
+            elfish creature named Dobby shows up with dire warnings for Harry:
+            He must not return to Hogwarts!
+          </p>
+
+          <p>
+            When Harry refuses to stay home from school, Dobby lands him in
+            heaps of trouble with the Dursley’s, who lock Harry up in his room
+            and refuse to let him out. Before Harry can sink too far into
+            despair, however, Ron Weasley and his two brothers, twins Fred and
+            George, come to his rescue in a flying car and spirit him back to
+            their house, where Harry is thrilled to spend the remainder of the
+            summer.
+          </p>
+
+          <p>
+            Thus starts an eventful second year for Harry Potter. Between having
+            to cope with more homework than ever, a Defense Against the Dark
+            Arts professor who is vain and convinced Harry is too, and a
+            mysterious voice he keeps hearing in the walls, Harry’s days are
+            nothing if not interesting.
+          </p>
+
+          <p>
+            As the school year progresses, however, the mysterious voice Harry
+            keeps hearing is getting more and more menacing, and soon vicious
+            attacks start happening to the students of Hogwarts. When Harry
+            discovers, quite by accident, that he is a Parslemouth and can speak
+            to snakes, he’s quickly singled out as Slytherin’s heir, the person
+            who, according to legend, will open the mysterious “Chamber of
+            Secrets” and release the monster within.
+          </p>
+
+          <p>
+            Of course Harry has no idea who is attacking the students, but he
+            quickly resolves to find out who is responsible. He, Ron, and
+            Hermione come up with an elaborate plan to disguise themselves as
+            Slytherin students so they can question Draco Malfoy, whom they
+            believe is the one setting the monster loose in the school. The plan
+            goes perfectly, but they’re disappointed when they find out from
+            Draco that he is not the one they’re looking for.
+          </p>
+
+          <p>
+            The quest gets personal when Hermione is attacked and petrified by
+            the monster. Ron and Harry are devastated, and are left on their own
+            to uncover the true identity of the person responsible. Events come
+            to a head when Ron’s sister, Ginny, is kidnapped and taken down into
+            the Chamber of Secrets, and Ron and Harry discover an important clue
+            that Hermione left for them. They quickly head down into the Chamber
+            of Secrets to rescue Ginny.
+          </p>
+
+          <p>
+            Harry and Ron get separated once they’re down there and Harry is
+            left to pursue the monster on his own. He quickly finds Ginny, and
+            thanks to some mysterious help from Dumbledore and his pet phoenix,
+            Fawkes, Harry is able to destroy Slytherin’s heir, who turns out to
+            be a younger version of Lord Voldemort. Voldemort had possessed
+            Ginny through an enchanted diary and was using her to set the
+            monster loose on the students.
+          </p>
+
+          <p>
+            Harry and Ron are both hailed as heroes when they make it back out
+            with Ginny, and Harry can’t imagine a finer end to such an eventful
+            year when Hermione and the rest of the victims are healed and they
+            win Gryffindor loads of House points.
+          </p>
+        </div>
+      </section>
+      <section id="section3" data-nav="Book 3">
+        <div class="landing__container">
+          <h2>Book 3: Harry Potter and the Prisoner of Azkaban</h2>
+          <p>
+            Harry starts off his third year at Hogwarts rather eventfully when
+            he inadvertently blows up his Aunt Marge, goes on the run, and is
+            then personally absolved by the Minister of Magic himself. He then
+            learns that mass murderer, Sirius Black, is intent on killing him,
+            and Mr. Weasley makes him promise a strange thing, that no matter
+            what he hears he won’t go looking for Black. Confused, Harry agrees.
+          </p>
+
+          <p>
+            As he heads back to school armed with this knowledge, he learns that
+            dementors, evil, soul-sucking creatures, have been stationed around
+            Hogwarts to protect the students from Black. The dementors affect
+            Harry much more than the other students because of his terrible
+            past, and he quickly resolves to learn to defend himself when he
+            begins collapsing every time they come near. He finds a willing
+            teacher in Professor Lupin, the new Defense Against the Dark Arts
+            professor, who begins teaching Harry the Patronus Charm, which is
+            the only spell that will work against the foul creatures.
+          </p>
+
+          <p>
+            As the school year progresses, the third year students are buried
+            under piles of homework. Hermione is already stressed out due to her
+            enormous course load, and none of them can figure out how she’s
+            getting to all her classes. It doesn’t help that Hermione’s cat,
+            Crookshanks, repeatedly tries to eat Ron’s rat, Scabbers, causing
+            the two friends to argue ceaselessly about the animals. They stop
+            speaking entirely when it’s discovered that Crookshanks seems to
+            have eaten Scabbers and Ron is devastated.
+          </p>
+
+          <p>
+            Harry has a few close calls with Black when he breaks into the
+            castle, but Black is not apprehended. Things come to a climax as the
+            school year ends when a number of events occur. First, Ron’s rat,
+            Scabbers, turns out to still be alive and is really a wizard in
+            disguise. This wizard, Peter Pettigrew, has chosen to hide himself
+            in this way so that he can spy on Harry and his friends on behalf of
+            Lord Voldemort. Harry learns that it was Peter, and not Sirius
+            Black, that betrayed his parents to Voldemort. Just when Harry is
+            sure Peter is finally going to be punished for his crimes, he
+            escapes into the night.
+          </p>
+        </div>
+      </section>
+      <section id="section4" data-nav="Book 4">
+        <div class="landing__container">
+          <h2>Book 4: Harry Potter and the Goblet of Fire</h2>
+          <p>
+            Harry can’t believe it. The Weasley’s have invited him to the
+            Quidditch World Cup, which means he’ll get to leave the Dursley’s
+            house early and go see a game that anyone would kill to see. The
+            game is intense, but not just because of the stellar players and
+            non-stop action. Voldemort’s servants, the Death Eaters, make an
+            appearance and the wizarding world is shocked when Voldemort’s sign
+            appears in the sky after the game.
+          </p>
+
+          <p>
+            When Harry, Ron, and Hermione finally make it back to Hogwarts a few
+            weeks later, they’re shocked to find that the school is the host of
+            the Triwizard Tournament this year. That's a competition between the
+            three wizarding schools of Hogwarts, Durmstrang, and Beauxbatons.
+            The goblet of fire choses one champion for each school. There, they
+            also learn, that there is an new teacher for the subject Defence
+            Against the Dark Arts. It´s Mad-Eye-Moody, an ex-auror. When the
+            students from the other schools arrive in October, the students
+            begin putting their name in the Goblet of Fire in order to be chosen
+            at Halloween as their school's champion. The champion of Hogwarts is
+            Cedric Diggory, the champion of Durmstrang is Victor Krum, a famous
+            Quidditch-player and the champion of Beauxbatons is Fleur Delacour.
+            Harry is shocked beyond belief when, in spite of his inability to
+            compete because of his age, he’s chosen as the fourth school
+            champion.
+          </p>
+
+          <p>
+            What’s even worse is that Ron doesn’t believe that Harry didn’t put
+            his name in the goblet. They get into a huge fight, and Ron stops
+            talking to Harry. The rest of Hogwarts is also incensed that Harry
+            is "looking for more fame", and the only person who stands by
+            Harry’s side is Hermione. In the tournament, the champions must
+            steal a golden eye from a dragon. Harry accomplish this task and the
+            hazard of the fight against the dragon convinces Ron, that Harry had
+            always told the truth and he reconcile with him. As the school year
+            progresses Harry is beset with troubles. Snooping journalist, Rita
+            Skeeter, continues to publish gossipy articles about Harry that
+            alienate him from the rest of the school, he’s turned down by his
+            crush, Cho Chang, when he asks her to the Yule Ball, and in the days
+            leading up to the second task of the tournament, which involves
+            retrieving something important from the bottom of a lake filled with
+            mer-people, he almost doesn’t find a way to accomplish what he’s got
+            to do. Saved at the last minute, however, Harry again gets almost
+            full marks and is tied for first place.
+          </p>
+
+          <p>
+            In the final task of the tournament, the champions are in a knot
+            garden, they need to look for the Winner´s Cup. The plants which
+            build the maze caught Cedric,the other champion of Hogwarts, but
+            Harry helps him. Harry and Cedric decide to be jointly the winner,
+            so they put their hands on the winner´s cup, but in this moment they
+            are transported to a graveyard where Cedric is killed by Wormtrail.
+            Harry witnessed Voldemort’s return to power, and barely makes it
+            back to Hogwarts alive, clutching Cedric’s body. Back at Hogwarts,
+            Professor Moody comforts him, but then Harry discovers, that he is a
+            traitor, who infiltrated Hogwarts in order of Voldemort. He’s a
+            Death Eater who transmuted his body with Polyjuice Potion. Harry
+            warns Dumbledore and the Minister of Magic, Cornelius Fudge about
+            the occurrence wit Voldemort, but only Dumbledore believes him. He
+            starts to arrange the defense for the return of the dark lord.
+          </p>
+        </div>
+      </section>
+      <section id="section5" data-nav="Book 5">
+        <div class="landing__container">
+          <h2>Book 5: Harry Potter and the Order of the Phoenix</h2>
+          <p>
+            It's been another long, hot summer at the Dursleys' for Harry
+            Potter. Having spent most of it in an adolescent "funk" of
+            depression and bitterness over the lack of informative letters from
+            his friends about Voldemort's return, he's suddenly jolted out of
+            his bad mood when two Dementors show up in the town of Little
+            Whinging and attack Harry and his cousin, Dudley. When Harry uses
+            magic to drive them off, however, he quickly receives a succession
+            of owls from the Ministry, requiring him to attend a disciplinary
+            hearing. His heart sinks when he reads that the question of whether
+            to expel him from Hogwarts will be decided at the hearing.
+          </p>
+
+          <p>
+            Harry is exonerated at the hearing but when Harry finally manages to
+            make it back to school, he finds things are different than when he
+            left. Hagrid's missing, there are skeletal horses pulling the school
+            carriages that only he can see, and the new Defense Against the Dark
+            Arts teacher is none other than toadlike, repulsive Dolores
+            Umbridge, a Ministry representative whom Harry is all too familiar
+            with.
+          </p>
+
+          <p>
+            Even worse is the constant mutterings of the other students. Having
+            spent all summer discrediting both Harry and Dumbledore, the
+            Ministry has succeeded in convincing everyone they're both crazy and
+            that Voldemort's return is nothing but a figment of their
+            imagination.
+          </p>
+
+          <p>
+            With only Ron and Hermione standing by his side, Harry is
+            hard-pressed to stay in a good mood and often lashes out at the ones
+            he is closest to. His defiant behavior lands him in detention for
+            weeks at a time with Professor Umbridge, who soon rises to the
+            status of Hogwarts High Inquistor and revels in sacking teachers and
+            keeping the entire school under the control of her stubby,
+            ugly-ringed fingers.
+          </p>
+
+          <p>
+            As the school year progresses Harry and Umbridge frequently lock
+            horns, and she retaliates by taking away everything he cares about:
+            Quidditch, letters from Sirius, and visits with Hagrid. So Harry
+            fights back the only way he can, by forming a secret defense group,
+            known as Dumbledore's Army, and teaching his friends how to fight
+            properly. In spite of the frantic workload in preparing for their
+            OWLs (tests that determine the student's future career choices), the
+            tyranny of Umbridge, and Harry's unbearable crush on Ravenclaw
+            seeker, Cho Chang, Harry keeps having tantalizing dreams of dark
+            corridors and locked doors that are distracting at best. His scar
+            prickles constantly and he soon finds he's turned into a tiny
+            antenna for Voldemort's mood swings, which certainly doesn't help
+            his own temper.
+          </p>
+
+          <p>
+            Things take a disastrous turn when Dolores Umbridge finds out about
+            Harry's secret defense group. Harry is filled with guilt when
+            Dumbledore, claims credit for the group in order to protect Harry,
+            and has to flee the school to escape arrest. This installment ends
+            with an epic battle of good and evil, resulting in a devastating
+            loss to Harry when his godfather Sirius Black is killed, and the
+            full revelation that his destiny lies intertwined with none other
+            than Voldemort himself. In the end, Dumbledore reveals the lost
+            prophecy to Harry: either Harry will kill Lord Voldemort or
+            Voldemort will kill Harry.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+    </footer>
+    <script src="./js/app.js" type="text/javascript"></script>
+  </body>
+</html>
